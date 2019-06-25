@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de"><head>
+        <!-- Damit alle Sonderzeichen richtig dargestellt werden, binden wir ein universelles Charakterset ein -->
+		<meta charset="utf-8">
+		<!-- Viewport dient dazu, auf verschiedenen Geräten die optimale Darstellung zu zeigen -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+        
+        <meta name="description" content="Modul101 statisches HTML5 und CSS lernen" />
+        <meta name="keywords" content="ÜK-Kurs, Lehrlingsausbildung, betriebliche Kurse, HTML5, CSS, Stylesheet, Ostschweiz, Modul101" />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="3 month" />
+
+            <!-- Hier wird das kleine Firmensymbol als Favicon geladen -->
+            <link rel="SHORTCUT ICON" href="../img/favicon.ico">
+            <!-- Hier werden alle Stylesheets geladen -->
+            <link rel="stylesheet" href="../styles/stylesheet.css">
+        
+        
+        
+        
+            <title>Multi Level Navigation</title>
+         <!-- bedingt Stylesheet nav-multi-level.css und nav-base.css -->
+    </head>
+
+<body>
+   <a class="skip-link screen-reader-text" href="#content">Zum Inhalt springen</a>
+    <header class="pagehead">
+        <div class="centered">
+            <h1 class="site-title">Multi Level Navigation</h1>
+        </div>
+    </header>
+    <main class="main-area" id="content">
+        <div class="centered">
+            <section class="menu-section">
+            
+               <h2 class="menu-heading">Multi Level Menü</h2>
+                
+                <nav id="multi-level-nav" class="multi-level-nav menu" role="navigation">
+                    <ul>
+                        <li><a href="#">Startseite</a></li>
+                                                
+                        <li class="has-children">
+                            <a href="#">Kochen<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Untermenü öffnen</span></button></a>
+                                <ul class="sub-menu">
+                                 <li><a href="#">Koch&nbsp;mieten</a></li>
+                                 <li><a href="#">Catering</a></li>
+                                 <li><a href="#">Restaurant</a></li>
+                                </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">Kurse<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Untermenü öffnen</span></button></a>
+                                <ul class="sub-menu">
+                                 <li><a href="#">Kursübersicht</a></li>
+                                 <li><a href="#">Registrieren</a></li>
+                                 <li><a href="#">Das Frühstück</a></li>
+                                 <li><a href="#">Das Mittagessen</a></li>
+                                 <li><a href="#">Das Abendessen</a></li>
+                                 <li><a href="#">Einkaufen</a></li>      
+                                </ul>
+                        </li>
+                        <li><a href="#">Über uns</a></li>
+                        
+                        <li><a href="#">Kontakt</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            </section>
+            
+            
+        </div> <!-- Centered> -->
+    </main>
+    <footer class="footer-area centered">
+        Derzeit noch leer
+    </footer>
+ 
+     <script src="https://code.jquery.com/jquery-latest.js"></script>
+     <script src="../inc/menu-toggle.js"></script>  
+    
+</body>
+</html>

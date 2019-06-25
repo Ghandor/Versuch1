@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="de"><head>
+        <!-- Damit alle Sonderzeichen richtig dargestellt werden, binden wir ein universelles Charakterset ein -->
+		<meta charset="utf-8">
+		<!-- Viewport dient dazu, auf verschiedenen Geräten die optimale Darstellung zu zeigen -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+        
+        <meta name="description" content="Modul101 statisches HTML5 und CSS lernen" />
+        <meta name="keywords" content="ÜK-Kurs, Lehrlingsausbildung, betriebliche Kurse, HTML5, CSS, Stylesheet, Ostschweiz, Modul101" />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="3 month" />
+          <!-- Hier werden alle Stylesheets geladen -->
+            <style>
+                @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+                /* Text meant only for screen readers. */
+                .screen-reader-text {
+                  border: 0;
+                  clip: rect(1px, 1px, 1px, 1px);
+                  clip-path: inset(50%);
+                  height: 1px;
+                  margin: -1px;
+                  overflow: hidden;
+                  padding: 0;
+                  position: absolute;
+                  width: 1px;
+                  word-wrap: normal !important;
+                }
+                .screen-reader-text:hover,
+                .screen-reader-text:active,
+                .screen-reader-text:focus {
+                  background-color: #eee;
+                  clip: auto !important;
+                  clip-path: none;
+                  color: #444;
+                  display: block;
+                  font-size: 1em;
+                  height: auto;
+                  left: 5px;
+                  line-height: normal;
+                  padding: 15px 23px 14px;
+                  text-decoration: none;
+                  top: 5px;
+                  width: auto;
+                  z-index: 100000; /* Above WP toolbar. */
+                }
+
+		/*---------------------------------------------------------------------
+                Allgemein Layouts
+                ----------------------------------------------------------------------*/
+                .centered{
+                    margin: 0 auto;
+                    padding 0 1em;
+                }
+                @media screen and (min-width: 52em){
+                    .centered{
+                        max-width: 52em;
+                        }
+                }
+                figure{
+                    margin: 0;
+                }
+
+                img{
+                    display: block;
+                    border: 0;
+                    max-width:100%;
+                    height:auto;
+                }
+                /*-----------------------------------------------------------------
+                Header Styles minus menü
+                ------------------------------------------------------------------*/
+
+                .pagehead {
+                    background: hsl(0, 0%, 90%);
+                }
+                .site-title {
+                    margin: 0 0 1em;
+                    padding: 1em 0;
+                    font-size: 2em;
+                    font-weight:300;
+                    text-align:center;
+                    color:black;
+                }
+                @media screen and (min-width:	44.44em) {
+                    .site-title {
+                        font-size:2em;
+                    }
+                }
+                }
+                @media screen and (min-width: 50em) {
+                    .site-title {
+                        font-size:2.5em;
+                    }
+                }
+                /*---------------------------------------------------------------------
+                Typography (alle Schriftdefinitionen)
+                ----------------------------------------------------------------------*/
+
+                body,
+                button,
+                input,
+                select,
+                textarea {
+                    color:404040;
+                    font-family: 'Helvetica', Arial, sans-serif;
+                    font-size:18px;
+                    line-height: 1.5;
+                }
+                p {
+                    margin-bottom:1.5em;
+                }
+                b,
+                strong {
+                    font-weight:bold;
+                }
+
+                /*----*/
+                dfn,
+                cite,
+                em,
+                i {
+                    font-style:italic;
+                }
+                blockquote {
+                    margin: 0 1.5em;
+                }
+                address {
+                    margin: 0 0 1.5em;
+                }
+                pre {
+                    background: #eee;
+                    font-family: "Courier 10 Pitch", Courier, monospace;
+                    font-size: 15px;
+                    font-size:1.5rem;
+                    line-height:1.6;
+                    margin-bottom: 1.6em;
+                    max-width:100%;
+                    overflow: auto;
+                    padding: 1.6em;
+                }
+                code,
+                kbd,
+                tt,
+                var {
+                    font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+                }
+                abbr,
+                acronym {
+                    border-bottom: 1px dotted #666;
+                    cursor: help;
+                }
+                mark,
+                ins {
+                    background: #fff9c0;
+                    text-decoration:none;
+                }
+                sup,
+                sub {
+                    font-size:75%;
+                    height: 0;
+                    line-height:0;
+                    position:relative;
+                    vertical-align:baseline;
+                }
+                sup {
+                    bottom: 1ex;
+                }
+                sub {
+                    top: .5ex;
+                }
+                small {
+                    font-size: 75%;
+                }
+                big {
+                    font-size:125%;
+                }
+                /*--------------------------------------------
+                Basis Navigation, gilt für alle Navigationen
+                --------------------------------------------*/
+
+                .menu-section {
+                    padding-bottom: 2em;
+                    margin-bottom: 2em;
+                }
+                .menu ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    background: hsl(0, 0%, 15%);
+                }
+                .menu li a {
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    padding: .6em 1em;
+                }
+                .menu li a:hover,
+                .menu li a:focus {
+                    background: hsl(0, 0%, 25%);
+                }
+                /*--------------------------------------------
+                Multi Level Navigation
+                --------------------------------------------*/
+
+                @media screen and (max-width: 30em) {
+                    /* Ebene 2, Menüpunkte einrücken */
+                    .multi-level-nav ul ul li a {
+                        padding-left: 2em;
+                    }
+                    /* Button verstecken */
+                    .dropdown-toggle {
+                        display: none;
+                    }
+                }
+                @media screen and (min-width: 30em) {
+                    /* Liste Ebene 1 */
+                    .multi-level-nav ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+
+                    }
+                    .multi-level-nav li {
+                         position: relative;   
+                    }
+                    li.has-children > a {
+                         padding-right: 0;    
+                    }
+                    /* Ebene 2 ausblenden */
+                    .multi-level-nav ul ul {
+                        display: none;
+                        position: absolute;
+                        z-index:100;
+                    }
+                    /* Liste Ebene 2 bekommt .toggled-on per JS eingefügt  */
+                    .multi-level-nav ul .toggled-on {
+                        display: block;
+                    }
+                    /* Listenelemente in Ebene 2 */
+                    .multi-level-nav ul ul li {
+
+                    }
+                    /* Ebene 1 Button mit Untermenü */
+                    .dropdown-toggle {
+                        margin: 0;
+                        padding: 0 .5em;
+                        border: 0;
+                        font-family: "FontAwesome";
+                        centent: "";
+                        text-transform: lowercase; /* Stop Screenreaders to read the Text as capital letters */
+                        background-color: transparent;
+                    }
+                    /* Button mit Pfeil nach unten */
+                    .dropdown-toggle:after {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 42px;
+                        color: white;
+                        content:"\f107";
+                        line-height: 1em;
+                    }
+                    .dropdown-toggle:hover,
+                    .dropdown-toggle:focus {
+                        background: hsl(0, 0%, 25%);
+                    }
+                    /* Button mit Pfeil nach oben .toggled-on per JS eingefügt */
+                    .dropdown-toggle.toggle-on:after {
+                        content: "\f106";
+                    }
+                }
+                 </style>
+   <title>Dropdown Navigation</title>
+         
+    </head>
+
+<body>
+   
+    <header class="pagehead">
+        <div class="centered">
+            <h1 class="site-title">Multi Level Navigation</h1>
+        </div>
+    </header>
+    <main class="main-area" id="content">
+        <div class="centered">
+            <section class="menu-section">
+            
+               <h2 class="menu-heading">Multi Level Menü</h2>
+                
+                <nav id="multi-level-nav" class="multi-level-nav menu" role="navigation">
+                    <ul>
+                        <li><a href="#">Startseite</a></li>
+                                                
+                        <li class="has-children">
+                            <a href="#">Kochen<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Untermenü öffnen</span></button></a>
+                                <ul class="sub-menu">
+                                 <li><a href="#">Koch&nbsp;mieten</a></li>
+                                 <li><a href="#">Catering</a></li>
+                                 <li><a href="#">Restaurant</a></li>
+                                </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">Kurse<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Untermenü öffnen</span></button></a>
+                                <ul class="sub-menu">
+                                 <li><a href="#">Kursübersicht</a></li>
+                                 <li><a href="#">Registrieren</a></li>
+                                 <li><a href="#">Das Frühstück</a></li>
+                                 <li><a href="#">Das Mittagessen</a></li>
+                                 <li><a href="#">Das Abendessen</a></li>
+                                 <li><a href="#">Einkaufen</a></li>      
+                                </ul>
+                        </li>
+                        <li><a href="#">Über uns</a></li>
+                        
+                        <li><a href="#">Kontakt</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            </section>
+            
+            
+        </div> <!-- Centered> -->
+    </main>
+    <footer class="footer-area centered">
+        Derzeit noch leer
+    </footer>
+ 
+     <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        
+        ( function( $ ) {
+                $( '.dropdown-toggle' ).click( function( e ) {
+                    var _this = $( this );
+                    e.preventDefault();
+                    _this.toggleClass( 'toggle-on' );
+                    _this.parent().next( '.sub-menu' ).toggleClass( 'toggled-on' );
+                    _this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+                    _this.html ( _this.html() === '<span class="screen-reader-text">Untermenü öffnen</span>' ? '<span class="screen-reader-text">Untermenü schliessen</span>' : '<span class="screen-reader-text">Untermenü öffnen</span>' );
+
+                });
+        }) (JQuery);
+    </script>
+    
+</body>
+</html>

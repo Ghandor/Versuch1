@@ -1,0 +1,37 @@
+@charset "utf-8";            
+
+/* CSS Document */
+
+
+
+/* Hier wird die Standard-CSS importiert, um verschiedene Browser abzugleichen */
+@import url('normalize.css');
+
+/* Hier wird die Vorlage für den Screenreader importiert */
+@import url('accessibility.css');
+
+/* Hier folgt das Stylesheet, um Web-Icons einbinden zu können */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Hier werden alle lokalen Designdefinitionen gespeichert */
+@import url('layout.css');
+
+/* Hier werden die Definitionen für den Header (Banner) gespeichert */
+@import url('pagehead.css');
+
+
+/* Hier werden alle Schriftdefinitionen gespeichert */
+@import url('typography.css');
+
+/* Hier werden Basis Navigationselemente gespeichert */
+@import url('nav-base.css');
+
+/* Hier werden Definitionen für einfache Navigationen gespeichert */
+@import url('nav-single-level.css');
+
+/* Hier werden Definitionen für erweiterte Navigationen gespeichert */
+@import url('nav-advanced.css');
+
+/* Hier werden Definitionen für Multi-Level-Navigationen gespeichert */
+@import url('nav-multi-level.css');
+
